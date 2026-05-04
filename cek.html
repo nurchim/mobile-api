@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Mahasiswa</title>
+</head>
+<body>
+
+<h2>Data Mahasiswa</h2>
+<pre id="output"></pre>
+
+<script>
+const url = "https://udkmzwpmdaecbbiiotkx.supabase.co/rest/v1/mahasiswa";
+
+// GANTI dengan ANON KEY (bukan service_role!)
+const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVka216d3BtZGFlY2JiaWlvdGt4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc5MzUxNDMsImV4cCI6MjA5MzUxMTE0M30.Okvt9d80VHv--7uF36VVPlS2K2VjHkdhWfuokwzquvo";
+
+fetch(url, {
+  headers: {
+    "apikey": API_KEY,
+    "Authorization": "Bearer " + API_KEY
+  }
+})
+.then(res => res.json())
+.then(data => {
+  document.getElementById("output").innerText =
+    JSON.stringify(data, null, 2);
+})
+.catch(err => console.error(err));
+</script>
+
+</body>
+</html>
