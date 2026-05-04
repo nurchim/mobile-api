@@ -5,7 +5,7 @@ header("Content-Type: application/json; charset=UTF-8");
 // endpoint Supabase
 $url = "https://udkmzwpmdaecbbiiotkx.supabase.co/rest/v1/mahasiswa?select=*";
 
-// 🔴 PENTING: ganti dengan ANON KEY (jangan service_role)
+//PENTING: ganti dengan ANON KEY (jangan service_role)
 $apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVka216d3BtZGFlY2JiaWlvdGt4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc5MzUxNDMsImV4cCI6MjA5MzUxMTE0M30.Okvt9d80VHv--7uF36VVPlS2K2VjHkdhWfuokwzquvo";
 
 // set header request ke Supabase
